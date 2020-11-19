@@ -21,7 +21,7 @@ function loginFail($error)
 
 function getUser($username, $password, $connection)
 {
-    $query = "SELECT * FROM accounts WHERE username='$username' and password='$password'";
+    $query = "SELECT * FROM accounts WHERE username='$username' AND password='$password'";
 
     $result = mysqli_query($connection, $query) or
         die('Database Query Failed for Query [' . $query . ']. ' . mysqli_error($connection));
