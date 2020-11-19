@@ -43,7 +43,7 @@ define('DB_NAME', 'sqli'); // Change if the name of the database is different
 
 1. Clone the repository [solodyagin/docker-compose-wamp](https://github.com/solodyagin/docker-compose-wamp): `git clone https://github.com/solodyagin/docker-compose-wamp`.
 2. `cd docker-compose-wamp`.
-3. Follow the steps in **Using WAMP / LAMP**.
+3. Follow the steps in **Using Local Machine (e.g. WAMP)**.
 4. `docker-compose up`.
 
 ## Usage
