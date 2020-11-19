@@ -72,6 +72,4 @@ require_once($doc_root . '/includes/header.php');
     </div>
 </main>
 
-<?php
-require_once($doc_root . '/includes/footer.php');
-?>
+<?php require_once($doc_root . '/includes/footer.php'); ?>
