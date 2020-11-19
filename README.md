@@ -12,10 +12,13 @@ Our project will explore one of the many classical code-injection techniques of 
 
 ### Using WAMP / LAMP
 
-1. Copy the contents of this entire directory into the `www` directory inside your WAMP directory. You may put them inside another directory, e.g. `app`, as long as it is within the `www` directory.
-2. Login to your phpMyAdmin or SQL client and import the file `sql/create.sql`.
-3. Edit the settings in `includes/common.php` to point the connection to your database. The settings to edit are:
+1. Copy the contents of this entire directory into the `www` directory inside your WAMP/LAMP directory. You may place them inside another directory, e.g. `app`, as long as it is within the `www` directory.
+2. Edit the settings in `includes/common.php` and `bootstrap.php` to point the connection to your database. See below.
+3. Either:
+    1. Login to your phpMyAdmin or SQL client and import the file `sql/create.sql`.
+    2. Use the bootstrap file directly by navigating to `localhost/<directory>/bootstrap.php`.
 
+The settings to edit in `includes/common.php` and `bootstrap.php` are:
 ```php
 // CHANGE YOUR DATABASE SETTING HERE
 define('DB_HOST', 'localhost'); // You may leave this intact unless you're using a different host
@@ -33,7 +36,7 @@ define('DB_NAME', 'sqli'); // Change if the name of the database is different
 
 ## Usage
 
-Navigate to your home directory - it could be `localhost` or `localhost/app` if you stored the contents of the directory in `app`.
+Navigate to your home directory `localhost/<directory>` and login with any user listed in the SQL accounts table.
 
 ### Inducing an SQL Injection
 
@@ -51,9 +54,9 @@ SELECT * FROM accounts WHERE username='' OR 1=1 -- AND password=''
 
 The different components of the SQL Injection are explained below:
 - `'` to close the username field
-- `OR 1=1` is the critical component that induces the SQL query to always return true regardless of the search criteria
-- `--` negates the rest of the command altogether
+- `OR 1=1` causes the SQL query to always return true regardless of the search criteria
+- `--` negates the rest of the command altogether (i.e. the rest of the command is a string)
 
 ## Disclaimer
 
-This set of codes are intended solely for demonstration purposes only and should ideally not be used on a live deployment.
+This set of codes are intended solely for demonstration purposes only and should ideally not be used on any live deployments.
