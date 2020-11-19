@@ -55,7 +55,7 @@ SELECT * FROM accounts WHERE username='' OR 1=1 -- AND password=''
 The different components of the SQL Injection are explained below:
 - `'` to close the username field
 - `OR 1=1` causes the SQL query to always return true regardless of the search criteria
-- `--` negates the rest of the command altogether (i.e. the rest of the command is a string)
+- `--` negates the rest of the command altogether (i.e. the rest of the command becomes a comment)
 
 ## Disclaimer
 
