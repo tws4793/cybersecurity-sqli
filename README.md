@@ -75,6 +75,6 @@ Besides this demonstration, there are also other great resources for exploring S
 
 ## Disclaimer
 
-This set of codes are intended solely for demonstration purposes only and should ideally not be used on any live deployments.
+This set of codes provided here are intended solely for demonstration purposes only and should ideally not be used on any live deployments.
 
 We also strongly discourage attempting SQL injection on a real website since such attempts will fail (this security vulnerability should have been patched) and will be logged with your IP address.
